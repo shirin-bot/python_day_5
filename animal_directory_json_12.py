@@ -3,7 +3,13 @@ try:
     with open("animal.json","r") as f:
         animal=json.load(f)
 except FileNotFoundError:
-    animal={}
+    animal={
+        "dog": "domestic",
+        "cat": "domestic",
+        "rabbit": "domestic",
+        "lion": "wild",
+        "tiger": "wild"
+    }
 def save():
     with open("animal.json","w") as f:
         json.dump(animal,f,indent=4)
@@ -38,4 +44,5 @@ while True:
         print("Invalid option")
         break
     
+
     
